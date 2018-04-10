@@ -18,4 +18,4 @@ var schema = new mongoose.Schema({
   public: {type: Boolean, default: true}
 });
 
-module.exports = mongoose.model(models.message.name, schema);
+module.exports = mongoose.model(models.post.name, schema);
