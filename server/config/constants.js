@@ -7,13 +7,19 @@ const actions = {
 }
 
 const models = {
-  message: {
+  post: {
     name: 'Post',
     endpoint: 'post'
   },
   user: {
     name: 'User',
     endpoint: 'user',
+    preventDefaultApi: true,
+    useCustomRoutes: true
+  },
+  collection: {
+    name: 'Collection',
+    endpoint: 'collection',
     preventDefaultApi: true,
     useCustomRoutes: true
   }
