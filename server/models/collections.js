@@ -7,6 +7,7 @@ var schema = new mongoose.Schema({
     posts: [{type: ObjectId, ref: models.post.name}],
     created: { type: Number, default: Date.now() },
     creatorId: {type: ObjectId, ref: models.user.name},
+    collectionUserIds: {type: Array, default: [] }
   });
   
   module.exports = mongoose.model(models.collection.name, schema);
