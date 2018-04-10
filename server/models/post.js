@@ -13,7 +13,7 @@ var schema = new mongoose.Schema({
   postCount: { type: Number, default: 0},
   shareCount: { type: Number, default: 0},
   viewCount: { type: Number, default: 0},
-  keptBy: { type: Array, default: [] },
+  savedBy: { type: Array, default: [] },
   author: { type: String, default: ''},
   public: {type: Boolean, default: true}
 });
