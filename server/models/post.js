@@ -3,13 +3,19 @@ let mongoose = require('mongoose')
 let ObjectId = mongoose.Schema.ObjectId
 
 var schema = new mongoose.Schema({
+  title: { type: String, required: true },
   body: { type: String, required: true },
+  imgUrl: {type: String},
   created: { type: Number, default: Date.now() },
-  creator: {
-    id: { type: ObjectId, ref: models.user.name, required: true },
-    name: { type: String }
-  }
-
+  creatorId: {type: ObjectId, ref: models.user.name},
+  collectionIds: { type: Array, default: [] },
+  collectionUserIds: { type: Array, default: [] },
+  postCount: { type: Number, default: 0},
+  shareCount: { type: Number, default: 0},
+  viewCount: { type: Number, default: 0},
+  keptBy: { type: Array, default: [] },
+  author: { type: String, default: ''},
+  public: {type: Boolean, default: true}
 });
 
 module.exports = mongoose.model(models.message.name, schema);
